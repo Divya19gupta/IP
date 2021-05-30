@@ -1,0 +1,322 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script src="https://kit.fontawesome.com/2c4e5ea4a5.js" crossorigin="anonymous"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+          <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    </head>
+
+    <style>
+        
+body{
+    margin: 0;
+    padding: 0;
+    font-family:Comic Sans MS, Comic Sans, cursive; 
+}
+.zoom{
+    width: 100%;
+    height: 1000px;
+    position: relative;
+    overflow: hidden;
+    background: url(bg.jpg);
+    background-size: cover;
+}
+.zoom::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    z-index: 1000;
+    background: linear-gradient(transparent , #fff);
+}
+.zoom #layer1{
+    position: absolute;
+    left: 40%;
+    width: 100%;
+    transform: translate(-50%);
+    z-index: 10;
+}
+.zoom #layer2{
+    position: absolute;
+    right: 0;
+    width: 100%;
+    z-index: 9;
+}
+
+.zoom #text {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    /* transform: translate(-0%); */
+    
+}
+.content{
+    padding: 100px;
+    box-sizing: border-box;
+    font-family: consolas;
+}
+.content h2{
+    margin: 0;
+    padding: 0;
+    font-size: 4em;
+   
+}
+.content p{
+    font-size: 1.2em;
+   
+}
+.card
+{
+  transition: 0.5s ease;
+  cursor:pointer;
+
+}
+  .card:hover{
+    border-color: #000839;
+    transform: scale(1.1);
+    -webkit-box-shadow: -1px 9px 40px -12px rgba(0,0,51,0.2);
+    -moz-box-shadow: -1px 9px 40px -12px rgba(0,0,51,0.2);
+    box-shadow: -1px 9px 40px -12px rgba(0,0,51,0.2);
+
+  }
+    </style>
+
+    <body>
+        <section class="zoom">
+            <img src="mountain1.png" id="layer1">
+            <img src="mountain2.png" id="layer2">
+            <img src="text.png" id="text">             
+        </section>
+        <section class="content">
+<h2 class="text-center">LEH</h1>
+<img src="hr.png" style="padding-left: 420px;"><br><br>
+<p class="text-center">Leh is the joint capital and largest town of the union territory of Ladakh in India. Leh, located in the Leh district, was also the historical capital of the Himalayan kingdom of Ladakh, the seat of which was in the Leh Palace, the former mansion of the royal family of Ladakh, built in the same style and about the same time as the Potala Palace in Tibet. Leh is at an altitude of 3,524 metres (11,562 ft), and is connected via National Highway 1 to Srinagar in the southwest and to Manali in the south via the Leh-Manali Highway.</p>
+        </section>
+        <script type="text/javascript">
+    var layer1 = document.getElementById('layer1')
+    scroll = window.pageYOffset;
+    document.addEventListener('scroll',function(e){
+        var offset = window.pageYOffset;
+        scroll = offset;
+        layer1.style.width = (100 + scroll/5) + '%';
+    });
+
+    var layer2 = document.getElementById('layer2')
+    scroll = window.pageYOffset;
+    document.addEventListener('scroll',function(e){
+        var offset = window.pageYOffset;
+        scroll = offset;
+        layer2.style.width = (100 + scroll/5) + '%';
+        
+        layer2.style.left = scroll/50 + '%';
+    });
+
+    var text = document.getElementById('text')
+    scroll = window.pageYOffset;
+    document.addEventListener('scroll',function(e){
+        var offset = window.pageYOffset;
+        scroll = offset;
+        layer2.style.width = (100 + scroll/5) + '%';
+        
+        text.style.top = - scroll/5 + '%';
+    });
+        </script>
+
+        <h1 class="text-center">HOTELS</h1>
+       <img src="hr.png" style="padding-left: 510px;"><br><br>
+       <section id="info1">
+          <div class="row">
+            <div class="col-md-6 col-sm-6">
+              <div class="info-left">
+                <img src="h1.jpg" style="width: 100%; padding-left: 60px; height: 350px;">
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <div class="info-right">
+                <h2>HOTEL ABC</h2>
+                <p>A café setting is known as a casual social environment where you can find people reading newspapers and magazines, playing board games, studying or chatting with others about current events. It is known also regarded as a place where information can be exchanged.
+                It shares some characteristics of a bar and some characteristics of a restaurant given its selection of foods and beverages served, but is distinct from a cafeteria which is a type of restaurant where customers can choose from many</p>
+                <br>
+                <button class="btn btn-default btn-lg btn-dark">Book Now</button>
+              </div>
+            </div>
+          </div>
+      </section>
+    <br><br><br>
+    <section id="info1" >
+        <div class="row">
+          <div class="col-md-6 col-sm-6">
+            <div class="info-left" style="padding-left:60px ;">
+              <h2>HOTEL ABC</h2>
+              <p>An entertainment venue and bar that usually operates late into the night. A nightclub is generally distinguished from regular bars, 
+                pubs or taverns by the inclusion of a stage for live music, one or more dance floor areas and a DJ booth, where a DJ plays recorded music. 
+                The upmarket nature of nightclubs can be seen in the inclusion of VIP areas in some nightclubs, for celebrities and their guests.
+                Nightclubs are much more likely than pubs or sports bars to use bouncers to screen prospective clubgoers for entry. 
+              </p>
+              <br>
+              <button class="btn btn-default btn-lg btn-dark">Book Now</button>
+            </div> 
+          </div>
+          <div class="col-md-6 col-sm-6">
+           
+            <div class="info-right">
+              <img src="h2.jpg" style="width: 100%; padding-right:50px; height: 330px;">
+            </div>
+          </div>
+        </div>
+    </section>
+    <br><br><br>
+    <section id="info1">
+        <div class="row">
+          <div class="col-md-6 col-sm-6">
+            <div class="info-left">
+              <img src="h4.jpg" style="width: 100%; padding-left: 60px; height: 350px;">
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-6">
+            <div class="info-right">
+              <h2>HOTEL ABC</h2>
+              <p>A café setting is known as a casual social environment where you can find people reading newspapers and magazines, playing board games, studying or chatting with others about current events. It is known also regarded as a place where information can be exchanged.
+              It shares some characteristics of a bar and some characteristics of a restaurant given its selection of foods and beverages served, but is distinct from a cafeteria which is a type of restaurant where customers can choose from many</p>
+              <br>
+              <button class="btn btn-default btn-lg btn-dark">Book Now</button>
+            </div>
+          </div>
+        </div>
+    </section>
+    <br><br><br>
+    <section id="info1" >
+        <div class="row">
+          <div class="col-md-6 col-sm-6">
+            <div class="info-left" style="padding-left:60px ;">
+              <h2>HOTEL ABC</h2>
+              <p>An entertainment venue and bar that usually operates late into the night. A nightclub is generally distinguished from regular bars, 
+                pubs or taverns by the inclusion of a stage for live music, one or more dance floor areas and a DJ booth, where a DJ plays recorded music. 
+                The upmarket nature of nightclubs can be seen in the inclusion of VIP areas in some nightclubs, for celebrities and their guests.
+                Nightclubs are much more likely than pubs or sports bars to use bouncers to screen prospective clubgoers for entry. 
+              </p>
+              <br>
+              <button class="btn btn-default btn-lg btn-dark">Book Now</button>
+            </div> 
+          </div>
+          <div class="col-md-6 col-sm-6">
+           
+            <div class="info-right">
+              <img src="h3.jpg" style="width: 100%; padding-right:50px; height: 330px;">
+            </div>
+          </div>
+        </div>
+    </section>
+
+<script
+src="https://code.jquery.com/jquery-3.2.1.js"
+integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+      window.sr = ScrollReveal();
+sr.reveal('.info-left', {
+  duration: 2000,
+  origin:'left',
+  distance:'300px',
+  viewFactor: 0.4
+});
+sr.reveal('.info-right', {
+  duration: 2000,
+  origin:'right',
+  distance:'300px',
+  viewFactor: 0.4
+});
+</script>
+<br><br>
+<h1 class="text-center">Places visit to near Leh</h1>
+<img src="hr.png" style="padding-left: 510px;"><br><br>
+<div class=" row m-5">
+
+    <div class="col-sm-3 card" >
+    <img src="p1.jpg" class="img-fluid">
+      <div class="card-body text-center">
+        <p class=" heading card-title" style="font-size:40px;color:#363636;">Pangong Lake</p>
+        <p class="card-text" style="color:grey;">Leh</p>
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">View more</button>
+    </div>
+</div>
+
+    <div class="col-sm-3 card" >
+      <img src="p2.jpg" class="card-img-top">
+      <div class="card-body text-center">
+        <p class="heading card-title" style="font-size:40px;color:#363636;">Khardungla paas</p>
+        <p class="card-text" style="color:grey;">Highest Motarable Road</p>
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">View more</button>
+    </div>
+</div>
+
+
+  <div class="col-sm-3 card" >
+    <img src="p3.jpg" class="card-img-top">
+    <div class="card-body text-center">
+      <p class="heading card-title"  style="font-size:40px;color:#363636;">Chang La</p>
+      <p class="card-text" style="color:grey;">leh-ledakh</p>
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">View more</button>
+  </div>
+</div>
+
+
+  <div class="col-sm-3 card" >
+    <img src="p4.jpg" class="card-img-top">
+    <div class="card-body text-center">
+      <p class="heading card-title" style="font-size:40px;color:#363636;">Magnetic Hill</p>
+      <p class="card-text" style="color:grey;">Leh</p>
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">View more</button>
+   </div>
+</div>
+</div>
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="row">
+        <div class="col-3" style="line-height: 35px;">
+            <ul ><b>Quick Links</b>
+                <li>Union Territory of Ladakh</li>
+                <li>Leh AEBAS portal</li>
+                <li>CEO j&k</li>
+                <li>University Of Ladakh</li>
+                <li>J&K JAD Portal</li>
+            </ul>
+        </div>
+        <div class="col-3"style="line-height: 35px;">
+         
+                <br><li>J&K govt Portal</li>
+                <li>GPF</li>
+                <li>Ladaklh Affairs Department</li>
+            </ul>
+        </div>
+        <div class="col-3" style="line-height: 35px;"> 
+            <ul><b>Helpline Numbber</b>
+                <br><li>Police - <a href="#" target="_blank" class="hover-text-dark">100</a></li>
+                <li>Fire Service - <a href="#" target="_blank" class="hover-text-dark">101</a></li>
+                <li>Medical Helpline - <a href="#" target="_blank" class="hover-text-dark">102</a></li>
+                <li>Casuality - <a href="#" target="_blank" class="hover-text-dark">253629</a></li>
+                <li>Election toll free no - 1950</li>
+            </ul>
+        </div>
+        <div class="col-3"style="line-height: 35px;"">
+            <b>For Contact</b><br>
+                    <a id="i1" href="#" class="fa fa-facebook"></a>
+                    <a id="i2" href="#" class="fa fa-twitter"></a>
+                    <a  id="i3" href="#" class="fa fa-google"></a>
+                    <a id="i4" href="#" class="fa fa-youtube"></a>
+                    <br>
+                    <p>Powered by <a href="#" target="_blank" class="hover-text-dark">EXPLORE INDIA</a></p>
+        </div>
+    </div>
+</div>
+
+
+    </body>
+</html>

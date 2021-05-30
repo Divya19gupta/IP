@@ -1,0 +1,322 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+#container{
+    width : 100%;
+    height : 100vh;
+    overflow: hidden;
+    background:black;
+}
+header{
+    height: 100vh;
+}
+#slider{
+    width: 300%;
+    height: 100%;
+    display: flex;
+    transition: .5s;
+}
+
+.slid{
+    width: 33.33%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0,0,0, 0.573);
+    background-blend-mode: multiply;
+}
+
+#slid1{
+    background-image: url(./theater_photos/theater1.jpg);
+}
+
+#slid2{
+    background-image: url(./theater_photos/theater2.jpg);
+}
+
+#slid3{
+    background-image: url(./theater_photos/theater3.jpg);
+}
+
+.content{
+    width: 80%;
+}
+.line{
+    width: 100%;
+    height: 3px;
+    background: #02c98d;
+    transition: .5s;
+}
+.heading,.des{
+    overflow: hidden;
+}
+.heading{
+    height: 70px;
+}
+header h1{
+    text-transform: uppercase;
+    font-size: 35px;
+    letter-spacing: 3px;
+    word-spacing: 6px;
+    color : white;
+    line-height: 70px;
+    transition: .5s;
+    position: relative;
+}
+
+header p{
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+    line-height: 40px;
+    position: relative;
+}
+
+nav{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10%;
+    position: fixed;
+    top:0;
+    z-index: 1;
+}
+
+h2{
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 25px;
+    line-height: 100px
+
+}
+
+#menu{
+    width: 70%;
+    height: 100%;
+}
+
+ul{
+    white-space: 100%;
+    height: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+} 
+
+li{
+    line-height: 100px;
+}
+
+a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+}
+a:hover{
+    font-size: 24px;
+    text-decoration: none;
+    color: #fff;
+}
+.section1{
+    justify-content: center;
+    padding: 10%;
+    font-family: 'Open Sans', Arial, Helvetica, 'Nimbus Sans L', sans-serif;
+}
+
+.sectiononeh1{
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 1s all ease-in-out;
+}
+
+.sectiononeh1-appear{
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container1 {
+    
+    position: relative;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  .row1:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 16.66%;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+.section3 {
+    padding-top: 8%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 8%;
+    background-color: black;
+}
+  .section3 .row img{
+      height: 80%;
+      width: 100%;
+  }
+
+  .section2{
+      padding-top: 8%;
+  }
+
+  .section4{
+    background-color: black;
+      padding: 5%;
+  }
+
+  .container1 .box{
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.container1 .box:hover{
+    z-index: 1;
+    transform: scale(1.25);
+    box-shadow: 0 25px 40px rgba(0,0,0,.5);
+}
+
+.box1 input{
+    padding: 10px 0;
+    margin-bottom: 30px;
+    width: 60%;
+    height: 40%;
+}
+.box1 textarea{
+    height: 80px;
+    padding: 10px 0;
+    margin-bottom: 40px;
+}
+.box1 input,
+.box1 textarea{
+   width:100%;
+   box-sizing: border-box;
+   box-shadow: none;
+   outline: none;
+    border:none;
+    border-bottom: 2px solid #999;
+}
+.box1 textarea{
+    margin-bottom:20px;
+}
+.box1 input[type="submit"]
+{
+    border-bottom: none;
+    cursor: pointer;
+    background: #0b9ad3;
+    color:black;
+    margin-bottom: 0;
+} 
+.box1 form div{
+    position: relative;
+}
+.box1 form div label{
+    position: absolute;
+    top:10px;
+    left:0;
+    color:#999;
+    transition: .5s;
+    pointer-events: none;
+    
+}
+.box1 input:focus ~ label,
+.box1 textarea:focus ~ label,
+.box1 input:valid ~ label,
+.box1 textarea:valid ~ label
+{
+    top:-12px;
+    left:0;
+    color:#0b9ad3;
+    font-size: 12px;
+    font-weight: bold;
+}
+.box1 input:focus ,
+.box1 textarea:focus,
+.box1 input:valid, 
+.box1 textarea:valid 
+{
+    border-bottom: 2px solid #0b9ad3;
+}

@@ -1,0 +1,98 @@
+body {font-family: "Times New Roman", Georgia, Serif;}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display";
+  letter-spacing: 5px;
+}
+      .carousel-inner img {
+    width: 100%;
+    height: 100%;
+  }
+  .row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.box{
+                margin-left: 10%;
+                margin-right: 10%;
+            }
+            .box input{
+                padding: 10px 0;
+                margin-bottom: 30px;
+                width: 60%;
+                height: 40%;
+            }
+            .box textarea{
+                height: 80px;
+                padding: 10px 0;
+                margin-bottom: 40px;
+            }
+            .box input,
+            .box textarea{
+               width:100%;
+               box-sizing: border-box;
+               box-shadow: none;
+               outline: none;
+                border:none;
+                border-bottom: 2px solid #999;
+            }
+            .box textarea{
+                margin-bottom:20px;
+            }
+            .box input[type="submit"]
+            {
+                border-bottom: none;
+                cursor: pointer;
+                background:black;
+                color:white;
+                margin-bottom: 0;
+            }
+            .box form div{
+                position: relative;
+            }
+            .box form div label{
+                position: absolute;
+                top:10px;
+                left:0;
+                color:#999;
+                transition: .5s;
+                pointer-events: none;
+                
+            }
+            .box input:focus ~ label,
+            .box textarea:focus ~ label,
+            .box input:valid ~ label,
+            .box textarea:valid ~ label
+            {
+                top:-12px;
+                left:0;
+                color:black;
+                font-size: 12px;
+                font-weight: bold;
+            }
+            .box input:focus ,
+            .box textarea:focus,
+            .box input:valid, 
+            .box textarea:valid 
+            {
+                border-bottom: 2px solid black;
+            }
+}

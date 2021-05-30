@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathura</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" type="text/css" href="jquery-ui.min.css">
+</head>
+
+<style>
+    *{
+    
+    box-sizing: border-box;   
+}
+
+
+
+.slider{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    z-index: -1;
+}
+
+nav{
+   
+    min-height: 10vh;
+    color: white;
+    align-items: center;
+
+}
+
+.hamburger{
+    justify-self: end;
+}
+.section1{
+    display: flex;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+}
+.hero{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.hero img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+section{
+    padding: 5%;
+}
+.container1 {
+    margin: 30px;
+    /* position: absolute; */
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-rows: auto;
+    grid-gap: 0 40px;
+  }
+
+  .container1 .box {
+    position: relative;
+    height: 300px;
+    /*background: #060c21;*/
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000;
+  }
+
+  .container1 .box:before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    transform: skew(2deg, 2deg);
+    z-index: -1;
+  }
+
+  .container1 .box:nth-child(1):before {
+    background: linear-gradient(315deg, #ff0057, #e64a19);
+  }
+
+  .container1 .box:nth-child(2):before {
+    background: linear-gradient(315deg, #89ff00, #00bcd4)
+  }
+
+  .container1 .box:nth-child(3):before {
+    background: linear-gradient(315deg, #e91e63, #5d02ff)
+  }
+
+  .container1 .box:nth-child(4):before {
+    background: linear-gradient(315deg, #ff0000, #ffc107)
+  }
+
+  .container1 .box:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    pointer-events: none;
+  }
+
+  .content {
+    position: relative;
+    padding: 20px;
+    transform: translateY(40px);
+  }
+
+  .box .content h2 {
+    position: absolute;
+    top: -60px;
+    right: 20px;
+    margin: 0;
+    padding: 0;
+    font-size: 4em;
+    color: rgba(255, 255, 255, .05);
+    transition: 0.5s;
+  }
+
+  .box:hover .content h2 {
+    top: -100px;
+  }
+
+  .box .content h3 {
+    margin: 0 0 10px;
+    padding: 0;
+    font-size: 24px;
+    font-weight: 500;
+    color: #fff;
+  }
+
+  .box .content p {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 12px;
+  }
+
+  .box .content a {
+    position: relative;
+    margin: 20px 0 0;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: 1px solid #fff;
+    display: inline-block;
+    color: #fff;
+    transition: 0.5s;
+    transform: translateY(-40px);
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .box:hover .content a {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .box .content a:hover {
+    color: #000;
+    background: #fff;
+  }
+
+
+
+  
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color:black;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+
+
+
+.container{
+  width: 80%;
+  padding: 20px;
+}
+.container .row100{
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+}
+.container .row100 .col{
+  position: relative;
+  width: 100%;
+  padding: 0 10px;
+  margin: 30px 0 10px;
+  transition: 0.5s;
+}
+.container .row100  .inputBox{
+  position: relative;
+  width: 100%;
+  height: 40px;
+  color: #45f3ff;
+}
+.container .row100  .inputBox input{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  padding: 0 10px;
+  z-index: 1;
+  color: #000;
+}
+.container .row100  .inputBox  .text{
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 40px;
+  font-size: 18px;
+  padding: 0 10px;
+  display: block;
+  transition: 0.5s;
+  pointer-events: none;
+}
+.container .row100  .inputBox input:focus + .text,
+.container .row100 .inputBox input:valid + .text
+{
+
+ top: -35px;
+ left: -10px;
+}
+.container .row100  .inputBox .line{
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #45f3ff;
+  transition: 0.5s;
+  border-radius: 2px;
+  pointer-events: none;
+}
+.container .row100 .inputBox input:focus ~ .line,
+.container .row100 .inputBox input:valid ~ .line
+{
+height: 100%;
+}
+input[type="submit"]
+{
+border: none;
+padding: 7px 35px;
+cursor: pointer;
+outline: inherit;
+background: #45f3ff;
+color: #000;
+font-size: 18px;
+border-radius: 2px;
+justify-content: center;
+}
+</style>
+<body class="bg-dark">
+
+    <header class="m-4 p-4">
+        <nav>
+            <div class="row">
+                <div class="col-2">
+                </div>
+                <div class="col-3">
+                    <h1 id="logo">Mathura</h1>
+                </div>
+                <div class="col-3">
+                </div>
+                <div class="col">
+                    <img src="logo.png" alt="" class="hamburger">
+                </div>
+            </div>
+            
+            
+        </nav>
+        <section class="section1">
+            <div class="hero">
+                <img src="m1.jpg">
+            </div>
+        </section>
+    </header>
+
+    <div class="slider"></div>
+
+    <section id="section2" class="container">
+        <h3 class="display-3 font-weight-bold text-sm-center text-light">History</h3>
+        <center><hr class="bg-light " width="50%"></center>
+        <div class="row">
+          <div class="col-sm">
+            <img src="m3.jpg" alt="" class="img-fluid d-block " style="margin-left: 100px; z-index: -1;">
+          </div>
+          <div class="col-sm">
+            <p class="mt-2 text-light" style="background-color: black; padding: 10%;z-index: -1;">
+                Mathura has an ancient history and also believed to be the homeland and birthplace of Krishna who was born in Yadu dynasty. According to the Archaeological Survey of India plaque at the Mathura Museum,[7] the city is mentioned in the oldest Indian epic, the Ramayana. 
+            </p>
+          </div>
+        </div>
+      </section>
+
+
+
+      <section id="section3" class="container">
+        <h3 class="display-3 font-weight-bold text-sm-center text-light">Culture</h3>
+      <center><hr class="bg-light " width="50%"></center>
+        <div class="row">
+    
+    
+          <div class="col-sm">
+    
+            <div class="container1">
+              <div class="box">
+                <div class="content">
+                  <h2>Dance</h2>
+                  <h3></h3>
+                  <p>Charkula is a dance performed in the Braj region of Uttar Pradesh. In this dance, veiled women balancing large multi-tiered circular wooden pyramids on their heads dance to songs about Lord Krishna. Each pyramid has 108 lighted oil lamps arranged in a spiral. It is specially performed on the third day after Holi. It is believed that on that day Radha was born. </p>
+                </div>
+              </div>
+            </div>
+    
+          </div>
+          <div class="col-sm">
+    
+            <div class="container1">
+              <div class="box">
+                <div class="content">
+                  <h2>Festival</h2>
+                  <h3></h3>
+                  <p>Janmashtami is grandly celebrated every year in Mathura with. Every year 3 to 3.5 million devotees celebrate Janmashtami in Mathura, with most number of people in Keshav Deva temple and Dwarkadheesh temple.[34][35] People generally observe a fast and break it at midnight when Lord Krishna was believed to have been born.  </p>
+                </div>
+              </div>
+            </div>
+    
+          </div>
+    
+    
+        </div>
+        <div class="row">
+    
+    
+          <div class="col-sm">
+    
+            <div class="container1 con3">
+              <div class="box">
+                <div class="content">
+                  <h2>Food</h2>
+                  <h3></h3>
+                  <p>Mathura is a famous holy city situated in Western Uttar Pradesh. It is well-known for its temples and also for its food and delicacies, especially the sweets, which are prepared here. It is frequently referred to as the birthplace of Lord Krishna, a revered Hindu deity. The inhabitants of this beautiful town are mostly vegetarian. Thus, the local cuisine is devoid of meats. </p>
+                </div>
+              </div>
+            </div>
+    
+          </div>
+    
+          <div class="col-sm">
+    
+            <div class="container1 con4">
+              <div class="box">
+                <div class="content">
+                  <h2>Clothes</h2>
+                  <h3></h3>
+                  <p>Mathura is world-famous for its colourful celebrations of the Holi festival, which attracts many tourists also – thanks partly to the hype, which the Indian film industry has given to this highly entertaining socio-religious festival</p>
+                </div>
+              </div>
+            </div>
+    
+          </div>
+    
+    
+        </div>
+      </section>
+    
+      <section id="section4" class="container">
+        <h3 class="display-3 font-weight-bold text-sm-center text-light">Explore</h3>
+      <center><hr class="bg-light " width="50%"></center>
+    
+      <div class="row p-4">
+        <div class="col">
+     <img src="m7.jpg" alt="" class="img-fluid d-block m-4">
+     <img src="m2.jpg" alt="" class="img-fluid d-block m-4">
+     <img src="m3.jpg" alt="" class="img-fluid d-block m-4">
+     
+     
+        </div>
+        <div class="col">
+          <img src="m5.jpg" alt="" class="img-fluid d-block m-4">
+          <img src="m6.jpg" alt="" class="img-fluid d-block m-4">
+          <img src="m1.jpg" alt="" class="img-fluid d-block m-4">
+    
+        </div>
+      </div>
+    
+      </section>
+
+      <h3 class="display-3 font-weight-bold text-sm-center text-light">HOTELS</h3>
+      <center><hr class="bg-light " width="50%"></center><br><br>
+
+       
+<div class="container">
+    <div class="mySlides">
+      <div class="numbertext"></div>
+      <img src="h1.jpg" style="width:100%">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext"></div>
+      <img src="h2.jpg" style="width:100%">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext"></div>
+      <img src="h3.jpg" style="width:100%">
+    </div>
+      
+    <div class="mySlides">
+      <div class="numbertext"></div>
+      <img src="h4.jpg" style="width:100%">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext"></div>
+      <img src="h5.jpg" style="width:100%">
+    </div>
+      
+    <div class="mySlides">
+      <div class="numbertext"></div>
+      <img src="h6.jfif" style="width:100%">
+    </div>
+      
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+  
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+  
+    <div class="row">
+      <div class="column">
+        <img class="demo cursor" src="h1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Hotel ABC">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="h2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Hotel ABC">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="h3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Hotel ABC">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="h4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Hotel ABC">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="h5.jpg" style="width:100%" onclick="currentSlide(5)" alt="Hotel ABC">
+      </div>    
+      <div class="column">
+        <img class="demo cursor" src="h6.jfif" style="width:100%" onclick="currentSlide(6)" alt="Hotel ABC">
+      </div>
+    </div>
+  </div>
+      <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("demo");
+          var captionText = document.getElementById("caption");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+          captionText.innerHTML = dots[slideIndex-1].alt;  
+        }
+        </script><br>
+  <h3 class="display-3 font-weight-bold text-sm-center text-light">FOR BOOKING</h3>
+  <center><hr class="bg-light " width="50%"></center><br><br>
+
+
+  <div class="container">
+    <div class="row100">
+      <div class="col">
+        <div class="inputBox">
+          <input type="text" name="" required="required">
+          <span class="text">First Name</span>
+          <span class="line"></span>
+
+        </div>
+      </div>
+      <div class="col">
+        <div class="inputBox">
+          <input type="text" name="" required="required">
+          <span class="text">Last Name</span>
+          <span class="line"></span>
+
+        </div>
+      </div>
+      
+    </div>
+
+    <div class="row100">
+      <div class="col">
+        <div class="inputBox">
+          <input type="text" name="" required="required">
+          <span class="text">Email</span>
+          <span class="line"></span>
+
+        </div>
+      </div>
+      <div class="col">
+        <div class="inputBox">
+          <input type="text" name="" required="required">
+          <span class="text">Mobile</span>
+          <span class="line"></span>
+
+        </div>
+      </div>
+      <div class="row100">
+        <div class="col">
+          <div class="inputBox">
+            <input type="text" name="" required="required" id="date">
+            <span class="text">Book Your Dates</span>
+            <span class="line"></span>
+            <script src="jquery-3.4.1.min (1).js"></script>
+            <script src="jquery-ui.min.js"></script>
+            <script>
+                $(document).ready(function(){
+                    $('#date').datepicker({
+                        dateFormat: "dd-mm-yy",
+                        changeMonth: true,
+                        changeYear: true,
+                        maxDate: '3y',
+                        minDate: '-3M'
+                    });
+                });
+            </script>
+          </div>
+        </div>
+        
+    </div>
+    <div class="row100">
+      <div class="col">
+        <input type="Submit" value="BOOK DIRECT" >
+      </div>
+    </div>
+  </div>
+ 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.5/scrollreveal.min.js" 
+    integrity="sha256-8VU/+18Z5eyYrv12HuV6lH74T2PFmP1ggKi+JkwYDHE=" 
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js" 
+    integrity="sha256-ABrLsV2caVEMCBfm3eNhv/CYQG+tGCqzw2f4b/Pag0M=" 
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineMax.min.js"
+     integrity="sha256-v/YsEqWkVsiNHryCWg+vjC/eDBakMAgOsCJRa0kNPOg=" 
+     crossorigin="anonymous"></script>
+     <script src="app_art.js"></script>
+</body>
+</html>

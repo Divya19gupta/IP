@@ -1,0 +1,98 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.s1{
+    background-image: url('./interiordesign_image/image5.jpg');
+    background-size: cover;
+}
+.section h1{
+    text-align: center;
+}
+.s1 h1{
+    color: white;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50% , -20%);
+}
+.description p{
+    margin: 50px 0px;
+}
+
+.container1 .box{
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.container1 .box:hover{
+    z-index: 1;
+    transform: scale(1.25);
+    box-shadow: 0 25px 40px rgba(0,0,0,.5);
+}
+
+.box1 input{
+    padding: 10px 0;
+    margin-bottom: 30px;
+    width: 60%;
+    height: 40%;
+}
+.box1 textarea{
+    height: 80px;
+    padding: 10px 0;
+    margin-bottom: 40px;
+}
+.box1 input,
+.box1 textarea{
+   width:100%;
+   box-sizing: border-box;
+   box-shadow: none;
+   outline: none;
+    border:none;
+    border-bottom: 2px solid #999;
+}
+.box1 textarea{
+    margin-bottom:20px;
+}
+.box1 input[type="submit"]
+{
+    border-bottom: none;
+    cursor: pointer;
+    background: #0b9ad3;
+    color:black;
+    margin-bottom: 0;
+} 
+.box1 form div{
+    position: relative;
+}
+.box1 form div label{
+    position: absolute;
+    top:10px;
+    left:0;
+    color:#999;
+    transition: .5s;
+    pointer-events: none;
+    
+}
+.box1 input:focus ~ label,
+.box1 textarea:focus ~ label,
+.box1 input:valid ~ label,
+.box1 textarea:valid ~ label
+{
+    top:-12px;
+    left:0;
+    color:#0b9ad3;
+    font-size: 12px;
+    font-weight: bold;
+}
+.box1 input:focus ,
+.box1 textarea:focus,
+.box1 input:valid, 
+.box1 textarea:valid 
+{
+    border-bottom: 2px solid #0b9ad3;
+}
